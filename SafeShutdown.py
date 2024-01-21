@@ -33,7 +33,7 @@ def poweroff():
 #blinks the LED to signal button being pushed
 def ledBlink():
 	while True:
-		GPIO.output(ledPin, GPIO.HIGH)
+#		GPIO.output(ledPin, GPIO.HIGH)
 		#self.assertEqual(GPIO.input(powerPin), GPIO.LOW)
 		GPIO.wait_for_edge(powerPin, GPIO.FALLING)
 		start = time.time()
