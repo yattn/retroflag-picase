@@ -13,9 +13,9 @@ powerenPin = 4 #pin 5
 def init():
 	GPIO.setmode(GPIO.BCM)
 #	GPIO.setup(powerPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.setup(resetPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#	GPIO.setup(resetPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 #	GPIO.setup(ledPin, GPIO.OUT)
-	GPIO.output(ledPin, GPIO.HIGH)
+#	GPIO.output(ledPin, GPIO.HIGH)
 	GPIO.setup(powerenPin, GPIO.OUT)
 	GPIO.output(powerenPin, GPIO.HIGH)
 	GPIO.setwarnings(False)
