@@ -12,10 +12,10 @@ powerenPin = 4 #pin 5
 #initialize GPIO settings
 def init():
 	GPIO.setmode(GPIO.BCM)
-#	GPIO.setup(powerPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-#	GPIO.setup(resetPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-#	GPIO.setup(ledPin, GPIO.OUT)
-#	GPIO.output(ledPin, GPIO.HIGH)
+	GPIO.setup(powerPin, GPIO.IN)
+	GPIO.setup(resetPin, GPIO.IN)
+	#GPIO.setup(ledPin, GPIO.OUT)
+	#GPIO.output(ledPin, GPIO.HIGH)
 	GPIO.setup(powerenPin, GPIO.OUT)
 	GPIO.output(powerenPin, GPIO.HIGH)
 	GPIO.setwarnings(False)
@@ -33,7 +33,7 @@ def poweroff():
 #blinks the LED to signal button being pushed
 def ledBlink():
 	while True:
-#		GPIO.output(ledPin, GPIO.HIGH)
+		#GPIO.output(ledPin, GPIO.HIGH)
 		#self.assertEqual(GPIO.input(powerPin), GPIO.LOW)
 		GPIO.wait_for_edge(powerPin, GPIO.FALLING)
 		start = time.time()
