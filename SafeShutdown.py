@@ -12,9 +12,9 @@ powerenPin = 4 #pin 5
 #initialize GPIO settings
 def init():
 	GPIO.setmode(GPIO.BCM)
-	GPIO.setup(powerPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#	GPIO.setup(powerPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 	GPIO.setup(resetPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.setup(ledPin, GPIO.OUT)
+#	GPIO.setup(ledPin, GPIO.OUT)
 	GPIO.output(ledPin, GPIO.HIGH)
 	GPIO.setup(powerenPin, GPIO.OUT)
 	GPIO.output(powerenPin, GPIO.HIGH)
@@ -28,7 +28,7 @@ def poweroff():
 		os.system("sudo killall emulationstation")
 		os.system("sudo killall emulationstatio") #RetroPie 4.6
 		os.system("sudo sleep 5s")
-		os.system("sudo shutdown -r now")
+		os.system("sudo shutdown -h now")
 
 #blinks the LED to signal button being pushed
 def ledBlink():
