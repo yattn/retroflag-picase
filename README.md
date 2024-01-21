@@ -29,7 +29,7 @@ The RetroFlag GPiCase 2 CM4 safe shutdown script will automatically switch betwe
 3. Press F4 enter terminal.
 4. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/install_gpi.sh" | sudo bash
+wget -O - "https://raw.githubusercontent.com/yattn/retroflag-picase/master/install.sh" | sudo bash
 
 
 ### For Recalbox
